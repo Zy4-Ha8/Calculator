@@ -13,7 +13,11 @@ function App() {
 
   // handle delete backSpace
   function handleDeleteBackSpace() {
-    setDisplayInput(displayInput.substring(0, displayInput.length - 1));
+    if (displayInput === "Infinity") {
+      setDisplayInput("0");
+    } else {
+      setDisplayInput(displayInput.substring(0, displayInput.length - 1));
+    }
     if (displayInput.length === 1) {
       setDisplayInput("0");
     }
