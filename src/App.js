@@ -45,7 +45,7 @@ function App() {
     if (displayInput.includes("%")) {
       const resultArray = displayInput.split("%");
       for (let i = 0; i < resultArray.length; ) {
-        setDisplayInput(`${+resultArray[i] % +resultArray[i + 1]}`);
+        setDisplayInput(`${(+resultArray[i] / +resultArray[i + 1]) * 100}%`);
         break;
       }
     } else if (displayInput.includes("/")) {
