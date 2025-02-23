@@ -35,7 +35,8 @@ function App() {
       !displayInput.includes("-") &&
       !displayInput.includes("+") &&
       !displayInput.includes("*") &&
-      displayInput.length !== 0
+      displayInput.length !== 0 &&
+      !displayInput.startsWith(0)
     ) {
       setDisplayInput((prev) => `${prev}${e.target.value}`);
     }
